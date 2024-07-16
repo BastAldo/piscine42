@@ -1,2 +1,3 @@
-subject
 .DS_Store
+*.out
+.vscode
