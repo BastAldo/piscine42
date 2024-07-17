@@ -6,7 +6,7 @@
 /*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 20:33:50 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/17 23:17:34 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/17 23:39:11 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,14 @@ void	ft_putstr(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		write(1, str[i], 1);
+		write(1, &str[i], 1);
 		i++;
 	}
 }
 
 int	main()
 {
-	char	stri[4] = "Ciao"; 
+	char	stri[5] = "Ciao";
+	ft_putstr(stri);
+	return (0);
 }
