@@ -6,7 +6,7 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 14:49:07 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/17 14:49:11 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/17 16:31:51 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_putnbr(int nb)
 	}
 	if (nb >= 10)
 	{
-		t_putnbr(nb / 10);
+		ft_putnbr(nb / 10);
 	}
 	ft_putchar(nb % 10 + '0');
 }
