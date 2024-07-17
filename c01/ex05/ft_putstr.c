@@ -6,12 +6,12 @@
 /*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 20:33:50 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/17 23:39:11 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/17 23:42:53 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-//TODO: scorrere la stringa fino a fine stringa \0
+
 void	ft_putstr(char *str)
 {
 	int	i;
@@ -22,11 +22,4 @@ void	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
-}
-
-int	main()
-{
-	char	stri[5] = "Ciao";
-	ft_putstr(stri);
-	return (0);
 }
