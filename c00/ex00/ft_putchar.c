@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 12:01:09 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/16 12:14:57 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/17 14:15:26 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,4 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-int	main(void)
-{
-	ft_putchar('a');
-	return (0);
 }

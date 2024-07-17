@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*    ft_print_reverse_alphabet.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 12:17:18 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/16 14:54:15 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/17 14:15:04 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,4 @@ void	ft_print_reverse_alphabet(void)
 		ft_putchar(l);
 		l--;
 	}
-}
-
-int	main(void)
-{
-	ft_print_reverse_alphabet();
 }

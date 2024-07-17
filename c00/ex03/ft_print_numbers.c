@@ -6,7 +6,7 @@
 /*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 14:30:55 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/16 17:48:05 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/17 14:14:55 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,4 @@ void	ft_print_numbers(void)
 		ft_putchar(n);
 		n++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_numbers();
 }
