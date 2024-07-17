@@ -2,3 +2,18 @@
 *.out
 .vscode
 **/*dSYM
+
+# Ignora tutti i file senza estensione nella directory corrente
+# Nota: questo ignorerà solo i file senza estensione nella root del progetto
+# e non nelle sottodirectory
+*
+
+# Ma non ignorare directory
+!*/
+
+# Non ignorare i file con estensioni specifiche (come .c, .h, .md, ecc.)
+!*.c
+!*.h
+!*.md
+!*.txt
+!*.sh
