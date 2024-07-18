@@ -3,48 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 19:31:15 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/18 19:45:20 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/19 00:36:23 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-unsigned int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
-//TODO: remove logi and include just printable char. NB: can remove fr_strlen
 int	ft_str_is_printable(char *str)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (str[i] && i < ft_strlen(str))
+	while (str[i])
 	{
-		if (!(str[i] >= 'A' && str[i] <= 'Z'))
+		if (!(str[i] >= 33 && str[i] <= 126))
 		{
 			return (0);
 		}
 		i++;
 	}
 	return (1);
-}
-
-int	main(void)
-{
-	char	s[] = "AAAAA$AAA";
-	int	i;
-
-	i = ft_str_is_printable(s);
-	return (i);
 }
