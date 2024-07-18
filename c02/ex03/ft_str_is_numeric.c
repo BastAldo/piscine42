@@ -6,7 +6,7 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 18:52:55 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/18 19:14:46 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/18 19:22:02 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,4 @@ int	ft_str_is_numeric(char *str)
 		i++;
 	}
 	return (1);
-}
-
-int	main(void)
-{
-	char	s[] = "";
-	int	i;
-
-	i = ft_str_is_numeric(s);
-	return (i);
 }
