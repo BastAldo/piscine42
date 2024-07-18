@@ -6,7 +6,7 @@
 /*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 15:56:25 by aldo              #+#    #+#             */
-/*   Updated: 2024/07/18 16:51:22 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/19 00:27:49 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	while (n && src[i] && i < n)
+	while (n && i < n)
 	{
 		if (i >= ft_strlen(src))
 			dest[i] = 0;
