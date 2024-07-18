@@ -6,7 +6,7 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 19:31:15 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/18 19:32:21 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/18 19:45:20 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ unsigned int	ft_strlen(char *str)
 	}
 	return (i);
 }
-
+//TODO: remove logi and include just printable char. NB: can remove fr_strlen
 int	ft_str_is_printable(char *str)
 {
 	unsigned int	i;
