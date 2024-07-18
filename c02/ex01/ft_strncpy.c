@@ -6,12 +6,11 @@
 /*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 15:56:25 by aldo              #+#    #+#             */
-/*   Updated: 2024/07/18 16:47:10 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/18 16:51:22 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
 
 int	ft_strlen(char *str)
 {
