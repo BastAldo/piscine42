@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 00:39:36 by aldo              #+#    #+#             */
-/*   Updated: 2024/07/19 00:43:50 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/19 10:43:35 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 //TODO: finire funzione che trasforma lettere in maiuscolo
-int ft_str_is_lowercase(char *str)
+char	*ft_strupcase(char *str)
 {
 	unsigned int	i;
 
 	i = 0;
 	while (str[i])
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'A'))
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			return (0);
+			str[i] = str[i] - 32;
 		}
 		i++;
 	}
-	return (1);
+	return (str);
 }
