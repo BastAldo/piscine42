@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 14:03:49 by aldo              #+#    #+#             */
-/*   Updated: 2024/07/18 23:54:41 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/19 10:43:11 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
-
 
 char	*ft_strcpy(char *dest, char *src)
 {
