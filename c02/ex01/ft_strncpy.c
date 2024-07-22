@@ -6,35 +6,38 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 09:02:36 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/22 15:03:19 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/22 16:59:52 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-unsigned int	ft_strlen(char *str)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (n && i < n)
+	while (i < n && src[i])
 	{
-		if (i >= ft_strlen(src))
-			dest[i] = 0;
 		dest[i] = src[i];
 		i++;
 	}
+
+	while (i < n)
+	{
+		dest[i] = 0;
+		i++;
+	}
+	
 	return (dest);
+}
+
+int	main(void)
+{
+char	dest[50];
+char	*dest2;
+char	src[] = "aldo";
+dest2 = ft_strncpy(dest, src, 8);
+write(1, &dest2, 1);
+return (0);
 }
