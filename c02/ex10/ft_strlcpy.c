@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/22 09:02:36 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/22 15:03:19 by aldpanza         ###   ########.fr       */
+/*   Created: 2024/07/22 14:08:12 by aldpanza          #+#    #+#             */
+/*   Updated: 2024/07/22 15:09:31 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-unsigned int	ft_strlen(char *str)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
+	unsigned int i;
+	unsigned int y;
 
 	i = 0;
-	while (str[i])
+	y = 0;
+	while (src[y])
+		y++;
+	if (size < 1)
+		return (y);
+	while (src[i] && i < size - 1)
 	{
-		i++;
-	}
-	return (i);
-}
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (n && i < n)
-	{
-		if (i >= ft_strlen(src))
-			dest[i] = 0;
 		dest[i] = src[i];
 		i++;
 	}
-	return (dest);
+	dest[i] = '\0';
+	return (y);
 }
