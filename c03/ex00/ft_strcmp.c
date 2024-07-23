@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 19:45:31 by aldo              #+#    #+#             */
-/*   Updated: 2024/07/22 20:04:40 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/23 10:14:08 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,10 @@
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	int	tots1;
-	int	tots2;
-	
-	while (s1)
+	while (*s1 && *s2 && *s1 == *s2)
 	{
-		tots1 += *s1;
 		s1++;
-	}
-	while (s1)
-	{
-		tots2 += *s2;
 		s2++;
 	}
-	return tots1 - tots2;
+	return *s1 - *s2;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 09:03:10 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/22 19:59:04 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/23 09:34:02 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(void)
 {
 	int	i;
 
-	i = ft_strcmp("abc", "ab");
+	i = c("abc", "abc");
 	printf("return %i", i);
 	return (0);
 }
