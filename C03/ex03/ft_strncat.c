@@ -6,7 +6,7 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 11:38:54 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/23 12:09:24 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/23 15:35:51 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		y++;
 	}
 	dest[i + y] = 0;
-	return dest;
+	return (dest);
 }
