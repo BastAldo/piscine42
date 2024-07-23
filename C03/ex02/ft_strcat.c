@@ -3,25 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 10:43:51 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/23 15:35:33 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/23 18:33:12 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
-	while (*dest)
+	char	*tdest;
+	tdest = dest;
+	while (*tdest)
 	{
-		dest++;
+		tdest++;
 	}
 	while (*src)
 	{
-		*dest = *src;
-		dest++;
+		*tdest = *src;
+		tdest++;
 		src++;
 	}
-	*dest = 0;
+	*tdest = 0;
 	return (dest);
 }
