@@ -10,7 +10,7 @@
 
 # Ma non ignorare directory
 !*/
-
+!*/tests
 # Non ignorare i file con estensioni specifiche (come .c, .h, .md, ecc.)
 !*.c
 !*.h
