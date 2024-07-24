@@ -6,7 +6,7 @@
 /*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 19:48:41 by aldo              #+#    #+#             */
-/*   Updated: 2024/07/24 19:56:24 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/24 21:37:54 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ int	ft_fibonacci(int index)
 	else if (index == 1 || index == 2)
 		return (1);
 	else
-		return (ft_fibonacci(index - 1), ft_fibonacci(index - 2));
+		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
