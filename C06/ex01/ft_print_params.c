@@ -6,7 +6,7 @@
 /*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 14:20:11 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/25 15:54:12 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/25 15:59:18 by aldo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,15 @@ void	ft_putstr(char *str)
 
 int	main(int argc, char **argv)
 {
-	ft_putstr(argv[0]);
-	write(1, "\n", 1);
+	int i;
+
+	i = 1;
+	while (i <= argc)
+	{
+		ft_putstr(argv[i]);
+		write(1, "\n", 1);
+		i++;
+	}
+
 	return (argc);
 }
