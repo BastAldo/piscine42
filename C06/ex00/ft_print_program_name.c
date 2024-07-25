@@ -1,51 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/24 22:50:01 by aldo              #+#    #+#             */
-/*   Updated: 2024/07/25 15:09:38 by aldpanza         ###   ########.fr       */
+/*   Created: 2024/07/25 14:20:11 by aldpanza          #+#    #+#             */
+/*   Updated: 2024/07/25 14:34:35 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	if (nb <= 0)
-		return (0);
-	if (nb == 1)
-		return (1);
-	while (i <= (nb / 2))
+	while (str[i])
 	{
-		if ((i * i) == nb)
-			return (i);
+		write(1, &str[i], 1);
 		i++;
 	}
-	return (0);
 }
 
-int	ft_is_prime(int nb)
-{
-	int	c;
-
-	c = 5;
-	if (nb < 2)
-		return (0);
-	if (nb >= 2 && nb <= 3)
-		return (1);
-	else if (nb % 2 == 0)
-		return (0);
-	else if (nb % 3 == 0)
-		return (0);
-	while (c <= ft_sqrt(nb))
-	{
-		if ((nb % c) == 0)
-			return (0);
-		c += 2;
-	}
-	return (1);
+int	main(int	argc, char	**argv)
+{	
+	ft_putstr("argc: ");
+	ft_putstr((char)argc + '0');
+	ft_putstr("\n argv: ");
+	ft_putstr(argv[0]);
+	ft_putstr("\n");
+	return (0);
 }

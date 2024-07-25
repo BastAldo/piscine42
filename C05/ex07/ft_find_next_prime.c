@@ -6,7 +6,7 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 09:42:06 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/25 10:29:06 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/25 15:10:15 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_sqrt(int nb)
 		return (0);
 	if (nb == 1)
 		return (1);
-	while (i < (nb / 2))
+	while (i <= (nb / 2))
 	{
 		if ((i * i) == nb)
 			return (i);
