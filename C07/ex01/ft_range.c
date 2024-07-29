@@ -1,17 +1,27 @@
-#include <stdlip.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int	*ft_range(int min, int max)
 {
 	int	i;
-	char	*range
-
+	int	*range;
+	int	diff;
+	
+	diff = max - min;
 	i = 0;
-	if ((max - min) > 0)
+	if ((diff) > 0)
 	{
-		range = (char *)malloc((max - min) *sizeof(char));
+		range = (int *)malloc(diff * sizeof(*range));
 		if (range == NULL)
 			return (NULL);
+		while ((i + min) < max)
+		{
+			range[i] = i + min;
+			i++;
+		}
+		return (range);
 	}
 	else
 		return (NULL);
 }
+
