@@ -6,27 +6,9 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 22:50:01 by aldo              #+#    #+#             */
-/*   Updated: 2024/07/25 15:09:38 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/29 11:28:01 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_sqrt(int nb)
-{
-	int	i;
-
-	i = 0;
-	if (nb <= 0)
-		return (0);
-	if (nb == 1)
-		return (1);
-	while (i <= (nb / 2))
-	{
-		if ((i * i) == nb)
-			return (i);
-		i++;
-	}
-	return (0);
-}
 
 int	ft_is_prime(int nb)
 {
@@ -41,7 +23,7 @@ int	ft_is_prime(int nb)
 		return (0);
 	else if (nb % 3 == 0)
 		return (0);
-	while (c <= ft_sqrt(nb))
+	while ((c * c) <= nb)
 	{
 		if ((nb % c) == 0)
 			return (0);

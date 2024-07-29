@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 14:20:11 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/25 21:56:32 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/29 08:57:00 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putstr(char *str)
 
 int	main(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = argc - 1;
 	while (i >= 1)

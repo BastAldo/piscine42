@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 14:20:11 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/25 15:59:18 by aldo             ###   ########.fr       */
+/*   Updated: 2024/07/29 08:59:11 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putstr(char *str)
 
 int	main(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (i <= argc)
@@ -35,6 +35,5 @@ int	main(int argc, char **argv)
 		write(1, "\n", 1);
 		i++;
 	}
-
 	return (argc);
 }
