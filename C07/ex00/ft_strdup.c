@@ -6,7 +6,7 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 10:51:56 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/26 11:57:35 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/29 14:42:40 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,13 @@ char	*ft_strdup(char *src)
 {
 	char		*dest;
 	long int	i;
-	//long int	y;
 
 	i = 0;
-	//y = 0;
 	while (src[i])
 		i++;
-	dest = (char *)malloc((i+1) * sizeof(char));
+	dest = (char *)malloc((i + 1) * sizeof(char));
 	if (dest == NULL)
 		return (NULL);
-
 	while (i)
 	{
 		dest[i] = src[i];
