@@ -6,7 +6,7 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 14:20:11 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/29 11:05:33 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/29 15:06:25 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ int	ft_strcmp(char *s1, char *s2)
 
 void	ft_sort_int_tab(char **tab, int size)
 {
-	int	p_size;
-	int	i;
-	int	y;
+	int		p_size;
+	int		i;
+	int		y;
 	char	*tmp;
-	
+
 	i = 1;
 	y = 0;
 	while (y < size)
