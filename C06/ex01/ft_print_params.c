@@ -6,7 +6,7 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 14:20:11 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/29 08:59:11 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/29 14:35:04 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,13 @@ int	main(int argc, char **argv)
 {
 	int	i;
 
+	(void)argc;
 	i = 1;
-	while (i <= argc)
+	while (argv[i])
 	{
 		ft_putstr(argv[i]);
 		write(1, "\n", 1);
 		i++;
 	}
-	return (argc);
+	return (0);
 }
