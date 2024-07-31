@@ -6,7 +6,7 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 14:24:21 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/31 12:08:39 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/31 14:19:47 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_pstrlen(int size, char **strs, char *sep)
 	{
 		i++;
 	}
-	strlen += (i * (size-1));
+	strlen += (i * (size - 1));
 	return (strlen);
 }
 
@@ -65,13 +65,13 @@ char	*ft_sjoin(int size, char *strjoin, char **strs, char *sep)
 		y = 0;
 	}
 	strjoin[order] = 0;
-	return(strjoin);
+	return (strjoin);
 }
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	char	*strjoin;
-	int	strlen;
+	int		strlen;
 
 	if (!size)
 	{
@@ -79,7 +79,6 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	strlen = ft_pstrlen(size, strs, sep) + 1;
 	strjoin = (char *)malloc(strlen * sizeof(char));
-	
 	ft_sjoin(size, strjoin, strs, sep);
 	return (strjoin);
 }
