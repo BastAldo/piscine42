@@ -40,21 +40,12 @@ int	ft_pstrlen(int size, char **strs, char *sep)
 	return (strlen);
 }
 
-char	*ft_strjoin(int size, char **strs, char *sep)
+char	*ft_sjoin(int size, char *strjoin, char **strs, char *sep)
 {
-
-	char	*strjoin;
-	int	strlen;
 	int	i;
 	int	y;
 	int	order;
 
-	if (!size)
-	{
-		return (NULL);
-	}
-	strlen = ft_pstrlen(size, strs, sep) + 1;
-	strjoin = (char *)malloc(strlen * sizeof(char));
 	i = 1;
 	y = 0;
 	order = y;
@@ -67,16 +58,29 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 			order++;
 		}
 		y = 0;
-		while (sep[y])
+		while (sep[y++])
 		{
-			strjoin[order] = sep[i];
-			y++;
-			order++;
+			strjoin[order++] = sep[i];
 		}
 		y = 0;
 		i++;
 	}
 	strjoin[order] = 0;
+	return(strjoin);
+}
+
+char	*ft_strjoin(int size, char **strs, char *sep)
+{
+	char	*strjoin;
+	int	strlen;
+
+	if (!size)
+	{
+		return (NULL);
+	}
+	strlen = ft_pstrlen(size, strs, sep) + 1;
+	strjoin = (char *)malloc(strlen * sizeof(char));
+	strjoin = ft_sjoin(size, strjoin, strs, sep);
 	return (strjoin);
 }
 
