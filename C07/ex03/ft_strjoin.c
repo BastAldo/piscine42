@@ -6,7 +6,7 @@
 /*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 14:24:21 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/31 16:12:45 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:18:55 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,11 +81,4 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	strjoin = (char *)malloc(strlen * sizeof(char));
 	ft_sjoin(size, strjoin, strs, sep);
 	return (strjoin);
-}
-
-int	main(int argc, char **argv)
-{
-	char	*r;
-	r = ft_strjoin(argc - 1, &(argv[1]), " = ");
-	return (0);
 }
