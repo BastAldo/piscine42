@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldpanza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 14:24:21 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/07/30 18:33:00 by aldpanza         ###   ########.fr       */
+/*   Updated: 2024/07/31 11:09:40 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_pstrlen(int size, char **strs, char *sep)
 	{
 		i++;
 	}
-	strlen += (i * (size-2));
+	strlen += (i * (size-1));
 	return (strlen);
 }
 
@@ -46,7 +46,7 @@ char	*ft_sjoin(int size, char *strjoin, char **strs, char *sep)
 	int	y;
 	int	order;
 
-	i = 1;
+	i = 0;
 	y = 0;
 	order = y;
 	while (i < size)
@@ -80,14 +80,16 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	strlen = ft_pstrlen(size, strs, sep) + 1;
 	strjoin = (char *)malloc(strlen * sizeof(char));
-	strjoin = ft_sjoin(size, strjoin, strs, sep);
+	
+	ft_sjoin(size, strjoin, strs, sep);
 	return (strjoin);
 }
 
-//int	main(int argc, char **argv)
-//{
-//	char	*r;
-//
-//	r = ft_strjoin(argc, argv,"--");
-//	return (0);
-//}
+int	main(int argc, char **argv)
+{
+	char	*r;
+
+	r = ft_strjoin(argc, argv,"--");
+	(void)r;
+	return (0);
+}
