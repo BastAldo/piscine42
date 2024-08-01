@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldo <aldo@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aldpanza <aldpanza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 22:41:28 by aldpanza          #+#    #+#             */
-/*   Updated: 2024/08/01 12:25:33 by aldo             ###   ########.fr       */
+/*   Updated: 2024/08/01 14:52:01 by aldpanza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,17 @@ char	ft_check_base(char *base)
 void	ft_putnbr_base(int nbr, char *base)
 {
 	int	base_len;
-
+	long tmp;
+	
 	base_len = ft_check_base(base);
 	if (!base_len)
 		return ;
-	if (nbr == -2147483647)
+	if (nbr == -2147483648)
 	{
-		write(1, "-", 1);
-		write(1, &base[2], 1);
-		nbr += 2000000000;
-		nbr *= -1;
+		tmp = nbr * -1;
+		ft_putnbr_base((int)tmp / base_len, base);
+		ft_putnbr_base((int)tmp % base_len, base);
+		return ;
 	}
 	if (nbr < 0)
 	{
@@ -62,10 +63,4 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 	ft_putnbr_base((int)nbr / base_len, base);
 	ft_putnbr_base((int)nbr % base_len, base);
-}
-
-int	main()
-{
-	ft_putnbr_base(4, "012");
-	return (0);
 }
